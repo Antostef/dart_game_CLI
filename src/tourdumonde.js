@@ -29,16 +29,16 @@ class tourdumonde extends game {
     play (player, score) {
         // Variables
         let diff = 20
-        let player_score = player.get_score()
-
-        if (score == (player_score +1) && score != 20) {
-            player.set_score(score)
+        let shot = parseInt(score.SHOT)
+        let player_score = parseInt(player.get_score())
+        if (shot == (player_score +1) && shot != 20) {
+            player.set_score(shot)
             diff -= player.get_score()
             console.log(`Well done ${player.get_name()} ! Your score is now ${player.get_score()}, ${diff} to go !`)
             return player
         }
-        else if (score == (player_score +1) && score == 20) {
-            player.set_score(score)
+        else if (shot == (player_score +1) && shot == 20) {
+            player.set_score(shot)
             console.log(`Well done ${player.get_name()} ! Your score is now ${player.get_score()}.`)
             return player
         }

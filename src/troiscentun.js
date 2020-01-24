@@ -30,8 +30,8 @@ class troiscentun extends game {
     play (player, score) {
         // Variables
         let player_score    = player.get_score()
-        let shot            = score.SHOT
-        let multiple        = score.MULTIPLE
+        let shot            = parseInt(score.SHOT)
+        let multiple        = parseInt(score.MULTIPLE)
         let new_score 
 
         new_score = player_score - (shot*multiple)
