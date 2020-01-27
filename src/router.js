@@ -8,7 +8,7 @@ const playerRouter  = require('./routers/game/player.js')
 router.use('/games', gameRouter)
 router.use('/players', playerRouter)
 
-app.get('/*', function (req, res) {
+router.get('/*', function (req, res) {
     res.send('Hello World!')
 })
 
