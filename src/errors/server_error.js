@@ -1,3 +1,5 @@
+const HttpError = require('./http_error')
+
 class ServerError extends HttpError {
     constructor(message = 'Server Error', type = 'SERVER_ERROR') {
         super(message)

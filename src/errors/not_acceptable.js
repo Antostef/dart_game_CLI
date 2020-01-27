@@ -1,3 +1,5 @@
+const HttpError = require('./http_error')
+
 class NotAcceptableError extends HttpError {
     constructor(message = 'Not Acceptable', type = 'NOT_ACCEPTABLE') {
         super(message)
