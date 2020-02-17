@@ -1,6 +1,6 @@
-const express   = require('express')
-const app       = express()
-const router        = require('./router.js')
+const express = require('express')
+const app     = express()
+const router  = require('./router.js')
 
 app.use('/', router)
 
