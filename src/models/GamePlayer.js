@@ -1,12 +1,17 @@
 const mongoose = require('mongoose')
 
-const gamePlayer_schema = new mongoose.Schema({
-    row_id: { type: Number, required: true, unique: true },
-    pseudo: { type: String },
-    firstname: { type: String },
-    lastname: { type: String },
-    email: { type: String },
-    password: { type: String }
+const game_player_schema = new mongoose.Schema({
+    id: { type: Number, required: true, unique: true },
+    playerId: { type: String },
+    gameId: { type: String },
+    remainingShots: { type: String },
+    score: { type: String },
+    rank: { type: String,
+            default: null },
+    order: { type: Number,
+             default: null }, 
+    createdAt: { type: Date,
+                default: Date.now }
   })
 
-module.exports = gamePlayer_schema;
+module.exports = game_player_schema;

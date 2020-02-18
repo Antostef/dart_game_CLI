@@ -1,5 +1,5 @@
 const gamemode = require('../gamemode.js')
-const player = require('./player.js')
+// const player = require('../player.js')
 
 class around_the_world extends gamemode {
     constructor() {

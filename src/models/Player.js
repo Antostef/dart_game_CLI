@@ -1,12 +1,21 @@
 const mongoose = require('mongoose')
 
 const player_schema = new mongoose.Schema({
-    row_id: { type: Number, required: true, unique: true },
-    pseudo: { type: String },
-    firstname: { type: String },
-    lastname: { type: String },
-    email: { type: String },
-    password: { type: String }
+    id: { type: Number, required: true, unique: true },
+    name: { type: String },
+    email: { type: String,
+             validate: {
+              validator: function(v) {
+                var emailRegex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+                return emailRegex.test(v);
+            },
+            message: props => `${props.value} is not a valid email!`
+          }
+        },
+    gameWin: { type: Number },
+    gameLost: { type: Number },
+    createdAt: { type: Date, 
+                 default: Date.now}
   })
 
 module.exports = player_schema;

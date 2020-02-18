@@ -13,11 +13,12 @@ const mongoose_options = {
 
 const db = async () => {
     try {
-      mongodb = await mongoose.connect(`mongodb://${server}/${database}`, connection_parameters)
-      console.log('Database connection successful')
+      mongodb = await mongoose.connect(`mongodb://${server}/${database}`, mongoose_options)
+      console.log('\n Database connection successful \n')
       return mongodb
     } catch (error) {
-        throw new server_error()
+      console.log(error.message)
+      new server_error()
     }
   }
 
@@ -26,9 +27,9 @@ const db = async () => {
 // // return error 500 server_error.
 // );
 
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-
-});
+// db.on('error', console.error.bind(console, 'connection error:'));
+// db.once('open', function() {
+//   console.log('Connection established successfully')
+// });
 
 module.exports = db;

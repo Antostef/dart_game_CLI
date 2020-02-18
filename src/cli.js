@@ -5,6 +5,7 @@ const inquirer       = require("inquirer");
 const chalk          = require("chalk");
 const figlet         = require("figlet");
 
+const db            = require('./db')
 const tourdumonde   = require('./engine/gamemodes/around_the_world.js')
 const troiscentun   = require('./engine/gamemodes/three_hundred_one.js')
 const cricket       = require('./engine/gamemodes/cricket.js')
@@ -21,11 +22,11 @@ const run = async () => {
     let players = []
     let bool_rules = false
     let gametype
-
-
+    
+    
     //show script introduction
     await hello()
-
+    await db()
     // Initializing the game
     init_questions = await init()
 
