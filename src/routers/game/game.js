@@ -2,64 +2,66 @@ const express   = require('express')
 const app       = express()
 const router    = express.Router()
 
-// ////////////////////////////////////////////////////////////
-// // Deletes
 
-// router.delete(`/${id}/shots/previous`, function (req, res) {
-//     res.send(`Hello World!`)
-// })
 
-// router.delete(`/${id}/players`, function (req, res) {
-//     res.send(`Hello World!`)
-// })
+////////////////////////////////////////////////////////////
+// Deletes
 
-// router.delete(`/${id}`, function (req, res) {
-//     res.send(`Hello World!`)
-// })
+router.delete(`/:id/shots/previous`, function (req, res) {
+    res.send(`Hello World!`)
+})
 
-// //////////////////////////////////////////
-// // Gets
+router.delete(`/:id/players`, function (req, res) {
+    res.send(`Hello World!`)
+})
 
-// router.get(`/${id}/players`, function (req, res) {
-//     res.send(`Hello World!`)
-// })
+router.delete(`/:id`, function (req, res) {
+    res.send(`Hello World!`)
+})
 
-// router.get(`/${id}/edit`, function (req, res) {
-//     res.send(`Hello World!`)
-// })
+//////////////////////////////////////////
+// Gets
 
-// router.get(`/${id}`, function (req, res) {
-//     res.send(`Hello World!`)
-// })
+router.get(`/:id/players`, function (req, res) {
+    res.send(`Hello World!`)
+})
+
+router.get(`/:id/edit`, function (req, res) {
+    res.send(`Hello World!`)
+})
+
+router.get(`/:id`, function (req, res) {
+    res.send(`Hello World!`)
+})
 
 router.get(`/new`, function (req, res) {
     res.send(`Hello World!`)
 })
 
 router.get(`/`, function (req, res) {
-    res.send(`Hello World! sur /games`)
+    res.render('game.html')
 })
 
-// ////////////////////////////////////////////
-// // Patches
+////////////////////////////////////////////
+// Patches
 
-// router.patch(`/${id}`, function (req, res) {
-//     res.send(`Hello World!`)
-// })
+router.patch(`/:id`, function (req, res) {
+    res.send(`Hello World!`)
+})
 
-// ////////////////////////////////////////////////
-// // Posts
+////////////////////////////////////////////////
+// Posts
 
-// router.post(`/${id}/shots`, function (req, res) {
-//     res.send(`Hello World!`)
-// })
+router.post(`/:id/shots`, function (req, res) {
+    res.send(`Hello World!`)
+})
 
-// router.post(`/${id}/players`, function (req, res) {
-//     res.send(`Hello World!`)
-// })
+router.post(`/:id/players`, function (req, res) {
+    res.send(`Hello World!`)
+})
 
-// router.post(`/`, function (req, res) {
-//     res.send(`Hello World!`)
-// })
+router.post(`/`, function (req, res) {
+    res.send(`Hello World!`)
+})
 
 module.exports = router

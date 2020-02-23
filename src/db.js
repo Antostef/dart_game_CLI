@@ -18,7 +18,6 @@ const db = async () => {
       return mongodb
     } catch (error) {
       console.log(error.message)
-      new server_error()
     }
   }
 

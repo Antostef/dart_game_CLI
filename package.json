@@ -14,12 +14,15 @@
   "license": "ISC",
   "dependencies": {
     "chalk": "^3.0.0",
+    "core-js": "^3.6.4",
     "esm": "^3.2.25",
     "express": "^4.17.1",
     "figlet": "^1.2.4",
     "inquirer": "^7.0.2",
     "mongodb": "^3.5.2",
-    "mongoose": "^5.8.9",
-    "nunjucks": "^3.2.0"
+    "mongoose": "^5.9.2",
+    "nunjucks": "^3.2.0",
+    "sequelize-cli": "^5.5.1",
+    "sqlite3": "^4.1.1"
   }
 }

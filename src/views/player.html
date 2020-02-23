@@ -1,0 +1,10 @@
+<script src="nunjucks.js"></script>
+
+{% extends "index.html" %}
+
+<section>
+    {% block test %}
+    {{super()}}
+    on /players 
+    {% endblock %}
+</section>

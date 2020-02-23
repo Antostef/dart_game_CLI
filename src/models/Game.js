@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-const gamemodes = require('../engine/gamemodes/*')
 
 const game_schema = new mongoose.Schema({
     id: { type: Number, required: true, unique: true },
