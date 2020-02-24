@@ -1,7 +1,7 @@
 const express   = require('express')
 const app       = express()
 const router    = express.Router()
-
+const folder    = 'games/'
 
 
 ////////////////////////////////////////////////////////////
@@ -39,7 +39,7 @@ router.get(`/new`, function (req, res) {
 })
 
 router.get(`/`, function (req, res) {
-    res.render('game.html')
+    res.render(`${folder}game.html`)
 })
 
 ////////////////////////////////////////////

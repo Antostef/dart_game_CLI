@@ -1,6 +1,6 @@
 const express   = require('express')
 const router    = express.Router()
-
+const folder    = "players/"
 
 /////////////////////////////////////////////
 // Deletes
@@ -25,7 +25,7 @@ router.get('/new', function (req, res) {
 })
 
 router.get('/', function (req, res) {
-    res.render('player.html')
+    res.render(`${folder}player.html`)
 })
 
 ////////////////////////////////////////////

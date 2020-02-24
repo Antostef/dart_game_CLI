@@ -10,12 +10,14 @@ const playerRouter  = require('./routers/game/player.js')
 router.use('/games', gameRouter)
 router.use('/players', playerRouter)
 
+router.get('/', function(req, res) {
+    res.redirect(303, 'games')
+});
+
 router.get('/*', function (req, res) {
+    res.status(404)
+    res.end()
     res.render('index.html')
 })
-
-router.get('/', function(req, res) {
-    res.render('index.html')
-});
 
 module.exports = router
