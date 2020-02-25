@@ -14,4 +14,6 @@ const game_player_schema = new mongoose.Schema({
                 default: Date.now }
   })
 
-module.exports = game_player_schema;
+var game_player_model = mongoose.model('GamePlayer', game_player_schema)
+
+module.exports = game_player_model;

@@ -11,4 +11,6 @@ const game_shot_schema = new mongoose.Schema({
                  default: Date.now }
   })
 
-module.exports = game_shot_schema;
+var game_shot_model = mongoose.model('GameShot', game_shot_schema)
+
+module.exports = game_shot_model;

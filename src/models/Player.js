@@ -12,10 +12,14 @@ const player_schema = new mongoose.Schema({
             message: props => `${props.value} is not a valid email!`
           }
         },
-    gameWin: { type: Number },
-    gameLost: { type: Number },
+    gameWin: { type: Number,
+                default: 0 },
+    gameLost: { type: Number,
+                default: 0 },
     createdAt: { type: Date, 
                  default: Date.now}
   })
 
-module.exports = player_schema;
+var player_model = mongoose.model('Player', player_schema)
+
+module.exports = player_model;

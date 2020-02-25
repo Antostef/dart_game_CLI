@@ -12,4 +12,7 @@ const game_schema = new mongoose.Schema({
                  default: Date.now }
   })
 
-module.exports = game_schema;
+var game_model = mongoose.model('Game', game_schema)
+
+
+module.exports = game_model;
